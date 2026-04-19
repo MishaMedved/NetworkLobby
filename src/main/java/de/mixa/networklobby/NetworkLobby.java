@@ -111,6 +111,10 @@ public class NetworkLobby extends JavaPlugin {
                 connect(player, "lobby");
                 return true;
             }
+            case "bedfight" -> {
+                connect(player, "bedfight");
+                return true;
+            }
         }
 
         return false;

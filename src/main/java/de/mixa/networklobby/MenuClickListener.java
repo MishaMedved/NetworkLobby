@@ -38,6 +38,10 @@ public class MenuClickListener implements Listener {
                 event.getWhoClicked().closeInventory();
                 plugin.connect((org.bukkit.entity.Player) event.getWhoClicked(), "parkour");
             }
+            case RED_BED -> {
+                event.getWhoClicked().closeInventory();
+                plugin.connect((org.bukkit.entity.Player) event.getWhoClicked(), "bedfight");
+            }
         }
     }
 }

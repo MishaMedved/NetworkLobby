@@ -31,7 +31,7 @@ public class InteractListener implements Listener {
 
         event.setCancelled(true);
 
-        Inventory menu = Bukkit.createInventory(null, 9, "§8Server-Menü");
+        Inventory menu = Bukkit.createInventory(null, 18, "§8Server-Menü");
 
         ItemStack smp = new ItemStack(Material.GRASS_BLOCK);
         ItemMeta smpMeta = smp.getItemMeta();
@@ -54,9 +54,17 @@ public class InteractListener implements Listener {
             parkour.setItemMeta(parkourMeta);
         }
 
-        menu.setItem(2, smp);
-        menu.setItem(4, pvp);
-        menu.setItem(6, parkour);
+        ItemStack bedfight = new ItemStack(Material.RED_BED);
+        ItemMeta bedfightMeta = bedfight.getItemMeta();
+        if (bedfightMeta != null) {
+            bedfightMeta.setDisplayName("§cBedFight");
+            bedfight.setItemMeta(bedfightMeta);
+        }
+
+        menu.setItem(3, smp);
+        menu.setItem(5, pvp);
+        menu.setItem(9, parkour);
+        menu.setItem(11, bedfight);
 
         event.getPlayer().openInventory(menu);
     }
