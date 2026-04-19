@@ -1,0 +1,17 @@
+name: NetworkLobby
+version: 1.0
+main: de.mixa.networklobby.NetworkLobby
+api-version: '1.21'
+
+commands:
+  smp:
+    description: Join SMP Server
+  pvp:
+    description: Join PvP Server
+  parkour:
+    description: Join Parkour Server
+  lobby:
+    description: Join Lobby Server
+  bedfight:
+    description: Sendet dich auf den BedFight-Server
+    usage: /bedfight
